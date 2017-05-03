@@ -53,9 +53,12 @@ table {
     li.key {
       float: left;
       border-radius: 4px;
-
-      .note {
-        
+  
+      .key-letter {
+          position: absolute;
+          top: 100%;
+          left: 50%;
+          transform: translate(-50%,-200%);
       }
 
       &:not(.key-f) {
@@ -76,7 +79,15 @@ table {
   position: relative;
   z-index: 10;
   box-shadow: none;
-      transition: all .06s ease;
+  transition: all .06s ease;
+  
+  .key-letter {
+    border: 1px solid #666;
+    color: #666;
+    border-radius: 2px;
+    padding: 3px 7px;
+  }
+
 
     &.key-pressed {
       box-shadow: inset -5px 0px 75px -18px rgba(184,178,184,1);
@@ -90,7 +101,15 @@ table {
   position: relative;
   z-index: 20;
   box-shadow: none;
-      transition: all .06s ease;
+  transition: all .06s ease;
+
+  .key-letter {
+    border: 1px solid #fff;
+    color: #fff;
+    border-radius: 2px;
+    padding: 3px 5px;
+    font-size: 12px;
+  }
 
     &.key-pressed {
       box-shadow:-1px -1px 2px rgba(255,255,255,0.2) inset, 0 -2px 2px 3px rgba(0,0,0,0.8) inset, 0 1px 2px rgba(0,0,0,0.7);
