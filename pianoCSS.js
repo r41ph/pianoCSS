@@ -8,7 +8,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
   function keyPressed(e) {
     const key = document.querySelector(`li[data-key="${e.keyCode}"]`);
-    
+    const sounds = document.querySelector(`audio[data-key="${e.keyCode}"]`);
+    sounds.currentTime = 0;
+    sounds.play();
     key.classList.add('key-pressed');
   }
 
